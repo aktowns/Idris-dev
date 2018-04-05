@@ -3,6 +3,9 @@
 #include "idris_gc.h"
 #include "idris_bitstring.h"
 #include <assert.h>
+#ifdef ESP32
+#include <string.h>
+#endif
 
 VAL copy(VM* vm, VAL x) {
     int ar;

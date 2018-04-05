@@ -7,6 +7,11 @@
 #include "idris_bitstring.h"
 #include "getline.h"
 
+#ifdef ESP32
+// Should be in <time.h>?
+extern int nanosleep (const struct timespec *, struct timespec *);
+#endif
+
 #define STATIC_ASSERT(COND,MSG) typedef char static_assertion_##MSG[(COND)?1:-1]
 
 STATIC_ASSERT(sizeof(Hdr) == 8, condSizeOfHdr);

@@ -7,6 +7,9 @@
 
 #include <inttypes.h>
 #include <stdint.h>
+#ifdef ESP32
+#include <string.h>
+#endif
 
 
 // TODO: measure user time, exclusive/inclusive stats

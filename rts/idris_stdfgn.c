@@ -14,6 +14,8 @@
 int win_fpoll(void* h);
 FILE *win32_u8fopen(const char *path, const char *mode);
 FILE *win32_u8popen(const char *path, const char *mode);
+#elif ESP32
+#include <lwip/sockets.h>
 #else
 #include <sys/select.h>
 #endif
