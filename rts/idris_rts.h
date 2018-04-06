@@ -10,6 +10,10 @@
 #include <pthread.h>
 #endif
 
+#ifdef ESP32 
+#include <string.h>
+#endif
+
 #include "idris_heap.h"
 #include "idris_stats.h"
 
